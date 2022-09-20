@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-sqrt(8);
+        System.out.println(sqrt(9));
 
     }
 
@@ -13,8 +13,12 @@ sqrt(8);
         T apply(T t);
     }
 
-   static void sqrt(int a) {
-        UnaryOperator<Integer> square = x -> x*x;
-        System.out.println(square.apply(a));
+    public static double sqrt(double input) {
+        UnaryOperator<Double> unaryOp = num -> Math.sqrt(num);
+
+        double result = unaryOp.apply(input);
+        return result;
     }
 }
+
+
